@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 850px;
+    max-height: 850px;
+}
+
+.square {
+    height: 49px;
+    width: 49px;
+    border: 1px solid black;
+    flex: 1 1 auto;
+}
