@@ -3,7 +3,7 @@ const container = document.querySelector('.container');
 container.style.width = '600' + 'px';
 container.style.height = container.style.width;
 
-const inputBtn = document.querySelector('#input');
+const inputBtn = document.querySelector('#input'); //change grid size button
 inputBtn.addEventListener('click', () => {
     numOfSq = prompt('Input');
     if (numOfSq > 100) {
@@ -19,16 +19,16 @@ inputBtn.addEventListener('click', () => {
 
 
 function updateGrid() {
-    container.innerHTML = '';
+    container.innerHTML = '';  //creates a new empty container; required to make a new grid in the same container else a second grid is constructed.
 }
 
-function createGrid(size = 16) {
+function createGrid(size = 16) {            //creates a new grid
     for (let i = 0; i < (size**2); i++) {
         const square = document.createElement('div');
         square.classList.add('square');
         square.classList.add('hover');
 
-        areaTtl = (Number(container.style.width.slice(0,3)))**2;
+        areaTtl = (Number(container.style.width.slice(0,3)))**2;  //logic for making a new grid in the same container area
         areaSq = areaTtl/(size**2);
         lenSq = Math.sqrt(areaSq);
 
